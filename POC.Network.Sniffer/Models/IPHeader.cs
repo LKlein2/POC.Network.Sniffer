@@ -118,21 +118,9 @@ namespace POC.Network.Sniffer.Models
             get { return String.Format("0x{0:x2} ({1})", _differentiatedServices, _differentiatedServices); }
         }
 
-        public string Flags
+        public ushort Flags
         {
-            get
-            {
-                var newFlags = _flags >> 13;
-                switch (newFlags)
-                {
-                    case 2:
-                        return "Don't fragment";
-                    case 1:
-                        return "More fragments to come";
-                    default:
-                        return newFlags.ToString(CultureInfo.InvariantCulture);
-                }
-            }
+            get { return _flags; }
         }
 
         public string FragmentationOffset

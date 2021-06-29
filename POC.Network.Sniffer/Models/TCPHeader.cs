@@ -117,47 +117,9 @@ namespace POC.Network.Sniffer.Models
             get { return (_flags & 0x20) != 0 ? _urgentPointer.ToString(CultureInfo.InvariantCulture) : ""; }
         }
 
-        public string Flags
+        public ushort Flags
         {
-            get
-            {
-                var newFlags = _flags & 0x3F;
-                var stringFlags = String.Format("0x{0:x2} (", newFlags);
-                if ((newFlags & 0x01) != 0)
-                {
-                    stringFlags += "FIN, ";
-                }
-                if ((newFlags & 0x02) != 0)
-                {
-                    stringFlags += "SYN, ";
-                }
-                if ((newFlags & 0x04) != 0)
-                {
-                    stringFlags += "RST, ";
-                }
-                if ((newFlags & 0x08) != 0)
-                {
-                    stringFlags += "PSH, ";
-                }
-                if ((newFlags & 0x10) != 0)
-                {
-                    stringFlags += "ACK, ";
-                }
-                if ((newFlags & 0x20) != 0)
-                {
-                    stringFlags += "URG";
-                }
-                stringFlags += ")";
-                if (stringFlags.Contains("()"))
-                {
-                    stringFlags = stringFlags.Remove(stringFlags.Length - 3);
-                }
-                else if (stringFlags.Contains(", )"))
-                {
-                    stringFlags = stringFlags.Remove(stringFlags.Length - 3, 2);
-                }
-                return stringFlags;
-            }
+            get { return _flags; }
         }
 
         public string Checksum

@@ -79,9 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\DNSHeader.cs" />
+    <Compile Include="Models\Flags\IPFlagModel.cs" />
+    <Compile Include="Models\Flags\TCPFlagModel.cs" />
     <Compile Include="Models\IPHeader.cs" />
     <Compile Include="Models\TCPHeader.cs" />
     <Compile Include="Models\UDPHeader.cs" />
+    <Compile Include="Models\WifiHeader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

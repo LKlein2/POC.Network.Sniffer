@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Closed="MainWindow_OnClosed"
         Width="525" Loaded="MainWindow_OnLoaded"
-        Height="350">
+        Height="442.891">
     <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
         <TreeView x:Name="SnifferTV"
                   Grid.Row="0"
-                  Margin="5" />
+                  Margin="5,5,5.4,9.8" />
         <DockPanel Grid.Row="1"
                    Margin="2"
                    LastChildFill="True">
